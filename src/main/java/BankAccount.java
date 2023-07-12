@@ -22,6 +22,9 @@ public class BankAccount {
     }
 
     public double withdraw(double amount, boolean branch) {
+        if ((amount > 500.00) && !branch) {
+            throw new IllegalArgumentException("Error message");
+        }
         balance -= amount;
         return balance;
     }
