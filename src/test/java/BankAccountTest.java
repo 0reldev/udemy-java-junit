@@ -53,8 +53,9 @@ class BankAccountTest {
     // In JUnit 4:
 //    @Text(expected = IllegalArgumentException.class)
 //    void withdraw_notBranch() {
-
-//}
+//      double balance = account.withdraw(600.00, false);
+//      assertEquals(400.00, balance, 0);
+//  }
     @Test
     void getBalance_deposit() {
         account.deposit(200.00, true);
